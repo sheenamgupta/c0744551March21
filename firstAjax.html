@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script>
+            var xmlhttp;
+            function getNum()
+            {
+                xmlhttp=new XMLHttpRequest();
+                xmlhttp.onreadystatechange=callback;
+
+            }
+            function callback(){
+                if(xmlhttp.readyState==4 &&xmlhttp.status==200)
+                {
+                    document.getElementById('result').innerHTML=xmlhttp.response
+                }
+            }
+        </script>
+        
+
+    </head>
+    <body>
+        <div id="result"></div>
+    </body>
+</html>
